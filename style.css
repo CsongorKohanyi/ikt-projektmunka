@@ -1,4 +1,21 @@
 body{
     background-color: #F3E9D6;
     color: #3E2723;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #C17A3E;
+}
+article{
+    padding: 10px;
+    border: #C17A3E 3px solid;
+    border-radius: 15px;
+}
+#elerhetoseg{
+    background-color: #3E2723;
+    color: #F3E9D6;
+}
+h1{
+    color: #C17A3E;
 }
