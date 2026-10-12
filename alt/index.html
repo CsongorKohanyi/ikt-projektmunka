@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Kandó Kávé</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+          <link rel="stylesheet" href="style.css">
+
+    <!-- JS script -->
+     <script src="script.js" defer></script>
+
+    <!-- Csak alap képbeállítás -->
+    <style>
+        .hero-img { height: 400px; object-fit: cover; }
+        .card-img { height: 220px; object-fit: cover; }
+    </style>
+</head>
+
+<body>
+
+<!-- FEJLÉC + NAVIGÁCIÓ -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="container-fluid px-4 py-3 d-flex align-items-center">
+
+            <!-- LOGÓ -->
+            <a href="#home" class="navbar-brand me-5">
+                <img src="images/logo.png"
+                     alt="Kandó Kávé logó"
+                     width="150">
+            </a>
+
+            <!-- NAVIGÁCIÓ -->
+            <div class="d-flex align-items-center gap-4 flex-wrap">
+
+                <button class="navbutton" onclick="sites.load('home')">Főoldal</button>
+                <button class="navbutton" onclick="sites.load('menu')">Kínálat</button>
+                <button class="navbutton" onclick="sites.load('gallery')">Galéria</button>
+                <button class="navbutton" onclick="sites.load('contact')">Kapcsolat</button>
+                <button class="navbutton" onclick="sites.load('order')">Rendelés</button>
+                <button class="navbutton" onclick="sites.load('promotions')">Akciók</button>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main id="MainContent"> <h1 style="text-align: center;">Betöltés...</h1> </main>
+
+<!-- LÁBLÉC -->
+
+<footer class="container-fluid py-4">
+
+    <p class="text-center mb-0">
+        Kandó Kávé · Diákoknak, kávéval, ötlettel.
+
+    </p>
+
+</footer>
+
+</body>
+</html>
