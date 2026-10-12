@@ -19,3 +19,22 @@ article{
 h1{
     color: #C17A3E;
 }
+header{
+    background-color: #3E2723;
+    color: #F3E9D6;
+    margin: 0;
+    padding: 0 10px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+a{
+    font-size: 1.3rem;
+}
+main{
+    padding: 0;
+}
+#kep3{
+    border-radius: 15px;
+    border: #C17A3E 3px solid;
+}
