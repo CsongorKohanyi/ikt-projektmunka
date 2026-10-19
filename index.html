@@ -39,19 +39,19 @@
             <!-- NAVIGÁCIÓ -->
             <div class="d-flex align-items-center gap-4 flex-wrap">
 
-                <a href="#home">Főoldal</a>
-                <a href="#menu">Kínálat</a>
-                <a href="#gallery">Galéria</a>
-                <a href="#contact">Kapcsolat</a>
-                <a href="#order">Rendelés</a>
-                <a href="#offers">Akciók</a>
+                <button onclick="sites.load('home')">Főoldal</button>
+                <button onclick="sites.load('menu')">Kínálat</button>
+                <button onclick="sites.load('gallery')">Galéria</button>
+                <button onclick="sites.load('contact')">Kapcsolat</button>
+                <button onclick="sites.load('order')">Rendelés</button>
+                <button onclick="sites.load('promotions')">Akciók</button>
 
             </div>
         </div>
     </nav>
 </header>
 
-<main>
+<main id="MainContent">
 <br><br><br>
 <!-- FŐOLDAL -->
 
@@ -609,6 +609,6 @@
     </p>
 
 </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
