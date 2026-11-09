@@ -70,3 +70,22 @@ button{
     font-size: 1.2rem;
 }
 main{padding-top: 89px;}
+
+#gallery img{
+    width: 100px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: transform 0.35s ease,
+                filter 0.35s ease;
+}
+#gallery:hover img:not(:hover){
+    filter: blur(2px);
+}
+#gallery img:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
