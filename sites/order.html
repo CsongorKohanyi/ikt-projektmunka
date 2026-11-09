@@ -1,0 +1,70 @@
+<!-- RENDELÉS -->
+
+<section id="order" class="container-fluid px-4 py-5">
+
+    <h1 class="mb-4">Rendelés</h1>
+
+    <div class="row g-5">
+
+        <!-- KOSÁR -->
+
+        <div class="col-12 col-lg-7">
+
+            <h2>Kosár</h2>
+            <br>
+            <div id="cart-items"></div>
+
+        </div>
+
+        <!-- ÖSSZESÍTŐ -->
+
+        <div class="col-12 col-lg-5">
+
+            <h2>Rendelésösszesítő</h2>
+
+            <p>
+                Összesen:
+                <strong id="cart-total">0 Ft</strong>
+            </p>
+
+            <label class="form-label">
+                Átvétel módja
+            </label>
+
+            <select class="form-select mb-3">
+
+                <option>Elvitel</option>
+                <option>Kiszállítás</option>
+
+            </select>
+
+            <label class="form-label">
+                Név
+            </label>
+
+            <input type="text"
+                   class="form-control mb-3" name="rendeles_nev">
+
+            <label class="form-label">
+                Telefonszám
+            </label>
+
+            <input type="tel"
+                   class="form-control mb-3">
+
+            <label class="form-label">
+                Cím
+            </label>
+
+            <input type="text"
+                   class="form-control mb-3">
+
+            <button>
+                Rendelés leadása
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
