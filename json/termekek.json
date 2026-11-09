@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "location": "./ikt_képek/royburi-coffee-4574774_1920.jpg",
+    "t_tipus": "Kávé",
+    "nev": "Espresso",
+    "ingredient": "Klasszikus espresso.",
+    "ar": 650
+  },
+  {
+    "location": "./ikt_képek/stocksnap-coffee-2560260_1920.jpg",
+    "t_tipus": "Kávé",
+    "nev": "Cappuccino",
+    "ingredient": "Krémes tejhabbal.",
+    "ar": 850
+  },
+  {
+    "location": "./ikt_képek/pexels-drink-1839134_1920.jpg",
+    "t_tipus": "Üdítő",
+    "nev": "Üdítő",
+    "ingredient": "Frissítő ital.",
+    "ar": 700
+  },
+  {
+    "location": "./ikt_képek/sklostudio-pancakes-5989136_1920.jpg",
+    "t_tipus": "Sütemény",
+    "nev": "Csokis sütemény",
+    "ingredient": "Édes finomság.",
+    "ar": 900
+  }
+]
