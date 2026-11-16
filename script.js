@@ -91,13 +91,14 @@ class operator {
         for (const termek of termekek) {
             const productIndex = this.producten.indexOf(termek);
             const col = document.createElement("div");
-            col.className = "col";
+            col.className = "col text-center px-2 py-0";
 
             const article = document.createElement("article");
             const image = document.createElement("img");
             image.src = termek.location;
             image.alt = termek.nev;
-            image.className = "img-fluid w-100 card-img";
+            image.className = "img-fluid w-100 h-50 card-img rounded-3";
+            
 
             const name = document.createElement("h3");
             name.className = "mt-3";
@@ -106,7 +107,7 @@ class operator {
             const description = document.createElement("p");
             description.textContent = termek.ingredient;
 
-            const price = document.createElement("p");
+            const price = document.createElement("h3");
             price.textContent = `${termek.ar} Ft`;
 
             const addButton = document.createElement("button");

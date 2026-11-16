@@ -20,13 +20,7 @@ article{
     border: #C17A3E 3px solid;
     border-radius: 15px;
 }
-#elerhetoseg{
-    background-color: #3E2723;
-    color: #F3E9D6;
-}
-h1{
-    color: #C17A3E;
-}
+
 header{
     background-color: rgba(62, 39, 35, 0.9); 
     color: #F3E9D6;
@@ -53,7 +47,7 @@ a{
 .hero h1{
     color: #F3E9D6;
 }
-.hero button{
+.hero a{
     border: 2px solid #C17A3E;
     border-radius: 15px;
     padding: 4px;
@@ -69,9 +63,11 @@ button{
     padding: 4px 20px;
     font-size: 1.2rem;
 }
-main{padding-top: 89px;}
+main{padding-top: 89px;
+padding-bottom: 60px;}
 
 #gallery img{
+    margin: 10px;
     width: 100px;
     height: 300px;
     object-fit: cover;
@@ -83,9 +79,45 @@ main{padding-top: 89px;}
                 filter 0.35s ease;
 }
 #gallery:hover img:not(:hover){
-    filter: blur(2px);
+    filter: blur(1px);
 }
 #gallery img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     z-index: 2;
+}
+footer{
+    background-color: #3E2723;
+    color: #F3E9D6;
+    padding: 10px;
+    margin-top: auto;
+    flex-shrink: 0;
+    bottom: 0;
+
+}
+.nav a{
+    border: none;
+    color: #F3E9D6;
+    background-color: #C17A3E;
+    border-radius: 15px;
+    padding: 4px 20px;
+    font-size: 1.2rem;
+}
+#logo{
+    border: none;
+}
+.nav a:hover{
+    background-color: #F3E9D6;
+    color: #C17A3E;
+}
+.nav a:active{
+    background-color: #F3E9D6;
+    color: #C17A3E;
+}
+.nav a:focus{
+    background-color: #F3E9D6;
+    color: #C17A3E;
+}
+h1{
+    font-size: 3rem;
+    color: #C17A3E;
 }

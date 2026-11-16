@@ -1,30 +1,58 @@
 [
   {
-    "location": "./ikt_képek/royburi-coffee-4574774_1920.jpg",
+    "location": "./ikt_képek/kep20.jpg",
     "t_tipus": "Kávé",
     "nev": "Espresso",
     "ingredient": "Klasszikus espresso.",
-    "ar": 650
+    "ar": 649
   },
   {
-    "location": "./ikt_képek/stocksnap-coffee-2560260_1920.jpg",
+    "location": "./ikt_képek/kep18.jpg",
     "t_tipus": "Kávé",
     "nev": "Cappuccino",
     "ingredient": "Krémes tejhabbal.",
-    "ar": 850
+    "ar": 999
+  },
+   {
+    "location": "./ikt_képek/kep19.jpg",
+    "t_tipus": "Kávé",
+    "nev": "Latte Macchiato",
+    "ingredient": "Krémes tejhabbal.",
+    "ar": 1199
   },
   {
-    "location": "./ikt_képek/pexels-drink-1839134_1920.jpg",
+    "location": "./ikt_képek/kep17.jpg",
     "t_tipus": "Üdítő",
-    "nev": "Üdítő",
+    "nev": "Limonádé",
     "ingredient": "Frissítő ital.",
-    "ar": 700
+    "ar": 699
   },
   {
     "location": "./ikt_képek/sklostudio-pancakes-5989136_1920.jpg",
     "t_tipus": "Sütemény",
-    "nev": "Csokis sütemény",
+    "nev": "Palacsinta",
     "ingredient": "Édes finomság.",
-    "ar": 900
+    "ar": 1399
+  },
+  {
+    "location": "./ikt_képek/kep15.jpg",
+    "t_tipus": "Sütemény",
+    "nev": "Csokis Süti",
+    "ingredient": "Édes finomság.",
+    "ar": 799
+  },
+  {
+    "location": "./ikt_képek/kep16.jpg",
+    "t_tipus": "Üdítő",
+    "nev": "Forró Csokoládé",
+    "ingredient": "Édes finomság.",
+    "ar": 899
+  },
+  {
+    "location": "./ikt_képek/kep21.jpg",
+    "t_tipus": "Üdítő",
+    "nev": "Fekete Tea",
+    "ingredient": "Meleg Tea.",
+    "ar": 699
   }
 ]
