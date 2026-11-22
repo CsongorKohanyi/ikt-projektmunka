@@ -24,30 +24,36 @@
 <!-- FEJLÉC + NAVIGÁCIÓ -->
 
 <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid px-3 py-2" id="logo">
 
-    <nav class="navbar">
-
-        <div class="container-fluid px-4 py-3 d-flex align-items-center" id="logo">
-
-            
-            <a href="#home" class="navbar-brand me-5">
+            <a href="#home" class="navbar-brand me-0">
                 <img src="./ikt_képek/Kando_Kave_3_atlatszo.png"
                      alt="Kandó Kávé logó"
                      width="150">
             </a>
 
-            <!-- NAVIGÁCIÓ -->
-            <div class="d-flex align-items-center gap-4 flex-wrap nav">
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Navigáció megnyitása">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="d-flex align-items-center gap-4 flex-wrap">
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <div class="navbar-nav nav flex-column flex-lg-row align-items-center gap-2 ms-lg-auto">
+
                     <a href="#home">Főoldal</a>
                     <a href="#menu">Kínálat</a>
                     <a href="#gallery">Galéria</a>
                     <a href="#contact">Kapcsolat</a>
                     <a href="#order">Kosár</a>
-                </div>
 
+                </div>
             </div>
+
         </div>
     </nav>
 </header>
