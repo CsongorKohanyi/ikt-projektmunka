@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hu">
 
@@ -11,9 +10,9 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
           rel="stylesheet">
+          <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="style.css">
-
+    <!-- Csak alap képbeállítás -->
     <style>
         .hero-img { height: 400px; object-fit: cover; }
         .card-img { height: 220px; object-fit: cover; }
@@ -23,11 +22,9 @@
 <body>
 
 <!-- FEJLÉC + NAVIGÁCIÓ -->
-
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid px-3 py-2" id="logo">
-
             <a href="#home" class="navbar-brand me-0">
                 <img src="./ikt_képek/Kando_Kave_3_atlatszo.png"
                      alt="Kandó Kávé logó"
@@ -40,23 +37,18 @@
                     aria-controls="mainNavbar"
                     aria-expanded="false"
                     aria-label="Navigáció megnyitása">
-
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="mainNavbar">
-
                 <div class="navbar-nav nav flex-column flex-lg-row align-items-center gap-2 ms-lg-auto">
-
                     <a href="#home">Főoldal</a>
                     <a href="#menu">Kínálat</a>
                     <a href="#gallery">Galéria</a>
                     <a href="#contact">Kapcsolat</a>
                     <a href="#order">Kosár</a>
-
                 </div>
             </div>
-
         </div>
     </nav>
 </header>
@@ -68,7 +60,6 @@
             <h2>Az oldal betöltése...</h2>
         </div>
     </section>
-
 </main>
 
 <!-- LÁBLÉC -->
@@ -80,12 +71,7 @@
     </p>
 
 </footer>
-
-<!-- Bootstrap JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Saját JavaScript -->
-<script src="script.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
