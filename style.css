@@ -25,7 +25,7 @@ header{
     background-color: rgba(62, 39, 35, 0.9); 
     color: #F3E9D6;
     margin: 0;
-    padding: 0 10px;
+    padding: 8px 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -35,24 +35,19 @@ header{
 a{
     font-size: 1.3rem;
 }
-
-.hero{
-    background-image: url('ikt_képek/kep1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-    color: #F3E9D6;
-    background-blend-mode: color ;
+.kepescucc{
+    
 }
-.hero h1{
+.kepescucc h1{
     color: #F3E9D6;
 }
-.hero a{
+.kepescucc a{
     border: 2px solid #C17A3E;
     border-radius: 15px;
     padding: 4px;
+    background-color: #C17A3E;
 }
-.hero a{
+.kepescucc a{
     color: #F3E9D6;
 }
 button{
@@ -120,4 +115,7 @@ footer{
 h1{
     font-size: 3rem;
     color: #C17A3E;
+}
+.carousel .hero-img {
+    padding: 0;
 }

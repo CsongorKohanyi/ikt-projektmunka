@@ -1,37 +1,64 @@
-<!-- FŐOLDAL -->
+<section id="home" class="p-0">
 
-<section id="home" class="container-fluid p-0">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
 
-    <!-- HERO -->
-    <div class="row align-items-center hero px-5">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
+                    class="active" aria-current="true" aria-label="1. dia"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
+                    aria-label="2. dia"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
+                    aria-label="3. dia"></button>
+        </div>
 
-        <div class="col-12">
+        <div class="carousel-inner kepescucc">
 
-            <h1>Kandó Kávé</h1>
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="ikt_képek/kep1.jpg" class="d-block w-100 hero-img" alt="Kandó Kávé">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100 top-0">
+                    <h1>Kandó Kávé</h1>
+                    <p class="lead">Diákoknak, kávéval, ötlettel.</p>
+                    <p class="d-none d-md-block">
+                        Egy modern, barátságos kávézó a Kandó diákjai számára.
+                    </p>
+                    <a href="#order">Rendelek</a>
+                </div>
+            </div>
 
-            <p class="lead">
-                Diákoknak, kávéval, ötlettel.
-            </p>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="ikt_képek/limonadestand.jpg" class="d-block w-100 hero-img" alt="Üdítők">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100 top-0">
+                    <h1>Frissítő italok</h1>
+                    <p class="lead">Frissítők a süti után.</p>
+                    <a href="#order">Rendelek</a>
+                </div>
+            </div>
 
-            <p>
-                Egy modern, barátságos kávézó a Kandó
-                diákjai számára.
-            </p>
-
-            <button>
-                <a href="#order">
-                    Rendelek
-                </a>
-            </button>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="ikt_képek/stocksnap-coffee-2560260_1920.jpg" class="d-block w-100 hero-img" alt="Sütemények">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100 top-0">
+                    <h1>Finom kávé kínálat</h1>
+                    <p class="lead">Prémium kávé mindenkinek.</p>
+                    <a href="#order">Rendelek</a>
+                </div>
+            </div>
 
         </div>
 
+        <button class="carousel-control-prev" type="button"
+                data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Előző</span>
+        </button>
+        <button class="carousel-control-next" type="button"
+                data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Következő</span>
+        </button>
 
     </div>
-    <br>
-    <br>
+    
 <section class="p-4">
-    <!-- 3 KIEMELT BLOKK -->
     <h2 class="mb-4">Kiemelt kínálat</h2>
 
     <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 p-3">
@@ -88,7 +115,6 @@
     </div>
 
 
-    <!-- ALSÓ INFORMÁCIÓ -->
     <div class="row row-cols-1 row-cols-md-2 mb-0 g-4 p-4 bg-light rounded">
 
         <div class="col">
