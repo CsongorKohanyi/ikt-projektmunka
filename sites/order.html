@@ -1,72 +1,61 @@
 <!-- RENDELÉS -->
 
 <section id="order" class="container-fluid px-4 py-5">
-
     <h1 class="mb-4">Kosár</h1>
 
     <div class="row g-5">
-
-        <!-- KOSÁR -->
-
         <div class="col-12 col-lg-7">
-
             <h2>Rendelés</h2>
             <br>
             <div id="cart-items"></div>
-
         </div>
 
-        <!-- ÖSSZESÍTŐ -->
-
         <div class="col-12 col-lg-5">
-
             <h2>Rendelésösszesítő</h2>
-
             <p>
                 Összesen:
                 <strong id="cart-total">0 Ft</strong>
             </p>
 
-            <label class="form-label">
-                Átvétel módja
-            </label>
+            <div id="checkout-choice">
+                <p>A rendelés folytatásához válassz egy lehetőséget:</p>
+                <button type="button" id="guest-checkout">Megrendelem vendégként</button>
+                <button type="button" id="login-checkout" class="mt-2">Bejelentkezem</button>
+            </div>
 
-            <select class="form-select mb-3">
+            <div id="checkout-form-container" hidden>
+                <div id="account-info" class="mb-3" hidden>
+                    <p id="account-greeting" class="mb-2"></p>
+                    <button type="button" id="logout-button">Kijelentkezés</button>
+                </div>
 
-                <option>Elvitel</option>
-                <option>Kiszállítás</option>
+                <form id="checkout-form">
+                    <label for="pickup-method" class="form-label">Átvétel módja</label>
+                    <select id="pickup-method" class="form-select mb-3">
+                        <option value="elvitel">Elvitel</option>
+                        <option value="kiszallitas">Kiszállítás</option>
+                    </select>
 
-            </select>
+                    <label for="order-name" class="form-label">Név</label>
+                    <input type="text" class="form-control mb-3" id="order-name" name="nev" required>
 
-            <label class="form-label">
-                Név
-            </label>
+                    <label for="order-email" class="form-label">E-mail-cím</label>
+                    <input type="email" class="form-control mb-3" id="order-email" name="email" required>
 
-            <input type="text"
-                   class="form-control mb-3" name="rendeles_nev">
+                    <label for="order-phone" class="form-label">Telefonszám</label>
+                    <input type="tel" class="form-control mb-3" id="order-phone" name="telefon" required>
 
-            <label class="form-label">
-                Telefonszám
-            </label>
+                    <div id="address-group" hidden>
+                        <label for="order-address" class="form-label">Szállítási cím</label>
+                        <input type="text" class="form-control mb-3" id="order-address" name="cim">
+                    </div>
 
-            <input type="tel"
-                   class="form-control mb-3">
-
-            <label class="form-label">
-                Cím
-            </label>
-
-            <input type="text"
-                   class="form-control mb-3">
-
-            <button>
-                Rendelés leadása
-            </button>
-
+                    <button type="submit">Rendelés leadása</button>
+                    <p id="checkout-message" class="mt-3" role="status" aria-live="polite"></p>
+                </form>
+            </div>
         </div>
-
     </div>
-
 </section>
 <br>
 <br>
