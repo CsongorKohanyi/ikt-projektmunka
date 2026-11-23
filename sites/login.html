@@ -1,0 +1,18 @@
+<section class="container px-4 py-5">
+    <h1 class="mb-4">Bejelentkezés</h1>
+    <p>A fiókodba való belépéshez add meg az e-mail-címedet és a jelszavadat.</p>
+
+    <form id="login-form" class="col-12 col-md-6">
+        <label for="login-email" class="form-label">E-mail-cím</label>
+        <input type="email" class="form-control mb-3" id="login-email" name="email" autocomplete="username" required>
+
+        <label for="login-password" class="form-label">Jelszó</label>
+        <input type="password" class="form-control mb-3" id="login-password" name="jelszo" autocomplete="current-password" required>
+
+        <button type="submit" id="login-submit">Bejelentkezem</button>
+        <a href="#register" class="ms-2">Nincs fiókom, regisztrálok</a>
+        <p id="login-message" class="mt-3" role="status" aria-live="polite"></p>
+    </form>
+
+    <a href="#order">Vissza a kosárhoz</a>
+</section>
