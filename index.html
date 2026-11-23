@@ -22,32 +22,31 @@
 <body>
 
 <!-- FEJLÉC + NAVIGÁCIÓ -->
+
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid px-3 py-2" id="logo">
-            <a href="#home" class="navbar-brand me-0">
+
+    <nav class="navbar">
+
+        <div class="container-fluid px-4 py-3 d-flex align-items-center" id="logo">
+
+            
+            <a href="#home" class="navbar-brand me-5">
                 <img src="./ikt_képek/Kando_Kave_3_atlatszo.png"
                      alt="Kandó Kávé logó"
                      width="150">
             </a>
 
-            <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar"
-                    aria-expanded="false"
-                    aria-label="Navigáció megnyitása">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <!-- NAVIGÁCIÓ -->
+            <div class="d-flex align-items-center gap-4 flex-wrap nav">
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <div class="navbar-nav nav flex-column flex-lg-row align-items-center gap-2 ms-lg-auto">
+                <div class="d-flex align-items-center gap-4 flex-wrap">
                     <a href="#home">Főoldal</a>
                     <a href="#menu">Kínálat</a>
                     <a href="#gallery">Galéria</a>
                     <a href="#contact">Kapcsolat</a>
                     <a href="#order">Kosár</a>
                 </div>
+
             </div>
         </div>
     </nav>
@@ -71,7 +70,6 @@
     </p>
 
 </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
