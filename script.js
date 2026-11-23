@@ -9,11 +9,8 @@ class operator {
             gallery: "./sites/gallery.html",
             contact: "./sites/contacts.html",
             order: "./sites/order.html",
-            login: "./sites/login.html",
-            register: "./sites/register.html",
             promotions: "./sites/promotions.html"
         };
-        this.currentUser = null;
         this.termekek = this.loadTermekek();
         this.termekek.catch(error => {
             console.error("A termékeket nem sikerült betölteni.", error);
@@ -48,8 +45,6 @@ class operator {
             gallery: "gallery",
             contact: "contact",
             order: "order",
-            login: "login",
-            register: "register",
             offers: "promotions"
         };
         const pagePath = this.pages[pageHashes[site] || site];
@@ -83,15 +78,6 @@ class operator {
 
             if (pageHashes[site] === "order" || site === "order") {
                 this.renderKosar();
-                this.setupCheckout();
-            }
-
-            if (pageHashes[site] === "login" || site === "login") {
-                this.setupLogin();
-            }
-
-            if (pageHashes[site] === "register" || site === "register") {
-                this.setupRegister();
             }
         } catch (error) {
             console.error("Az oldal tartalmát nem sikerült betölteni.", error);
@@ -263,149 +249,6 @@ class operator {
             this.renderKosar();
         }, { once: true });
     }
-
-    setupCheckout() {
-        const choice = this.main.querySelector("#checkout-choice");
-        const formContainer = this.main.querySelector("#checkout-form-container");
-        const form = this.main.querySelector("#checkout-form");
-        const pickupMethod = this.main.querySelector("#pickup-method");
-        const addressGroup = this.main.querySelector("#address-group");
-        const addressInput = this.main.querySelector("#order-address");
-        const message = this.main.querySelector("#checkout-message");
-        const accountInfo = this.main.querySelector("#account-info");
-        const greeting = this.main.querySelector("#account-greeting");
-
-        if (!choice || !formContainer || !form || !pickupMethod || !addressGroup || !addressInput || !message || !accountInfo || !greeting) {
-            throw new Error("A rendelési űrlap hiányos.");
-        }
-
-        const updateAddressRequirement = () => {
-            const delivery = pickupMethod.value === "kiszallitas";
-            addressGroup.hidden = !delivery;
-            addressInput.required = delivery;
-        };
-        pickupMethod.addEventListener("change", updateAddressRequirement);
-        updateAddressRequirement();
-
-        const showCheckoutForm = () => {
-            choice.hidden = true;
-            formContainer.hidden = false;
-            message.textContent = "";
-        };
-
-        const guestButton = this.main.querySelector("#guest-checkout");
-        const loginButton = this.main.querySelector("#login-checkout");
-        const logoutButton = this.main.querySelector("#logout-button");
-        if (!guestButton || !loginButton || !logoutButton) {
-            throw new Error("A rendelési lehetőségek nem találhatók.");
-        }
-
-        guestButton.addEventListener("click", () => {
-            accountInfo.hidden = true;
-            showCheckoutForm();
-        });
-        loginButton.addEventListener("click", () => {
-            window.location.hash = "login";
-        });
-        logoutButton.addEventListener("click", () => {
-            this.currentUser = null;
-            form.reset();
-            accountInfo.hidden = true;
-            formContainer.hidden = true;
-            choice.hidden = false;
-            updateAddressRequirement();
-        });
-
-        if (this.currentUser) {
-            const user = this.currentUser;
-            this.main.querySelector("#order-name").value = user.nev;
-            this.main.querySelector("#order-email").value = user.email;
-            this.main.querySelector("#order-phone").value = user.telefon || "";
-            addressInput.value = user.cim || "";
-            greeting.textContent = `Bejelentkezve: ${user.nev}`;
-            accountInfo.hidden = false;
-            showCheckoutForm();
-        }
-
-        form.addEventListener("submit", event => {
-            event.preventDefault();
-            if (!form.reportValidity()) {
-                return;
-            }
-
-            message.textContent = "Az adatok rendben vannak, a rendelés leadásra kész.";
-        });
-    }
-
-    setupLogin() {
-        const form = this.main.querySelector("#login-form");
-        const message = this.main.querySelector("#login-message");
-        const submitButton = this.main.querySelector("#login-submit");
-        if (!form || !message || !submitButton) {
-            throw new Error("A bejelentkezési űrlap hiányos.");
-        }
-
-        form.addEventListener("submit", async event => {
-            event.preventDefault();
-            message.textContent = "";
-            submitButton.disabled = true;
-
-            try {
-                const response = await fetch("./json/users.json");
-                if (!response.ok) {
-                    throw new Error(`A felhasználók betöltése sikertelen: ${response.status}`);
-                }
-
-                const users = await response.json();
-                if (!Array.isArray(users) || users.some(user =>
-                    user === null ||
-                    typeof user !== "object" ||
-                    typeof user.nev !== "string" ||
-                    typeof user.email !== "string" ||
-                    typeof user.jelszo !== "string"
-                )) {
-                    throw new Error("A users.json formátuma érvénytelen.");
-                }
-
-                const email = form.elements.email.value.trim().toLowerCase();
-                const password = form.elements.jelszo.value;
-                const user = users.find(candidate =>
-                    candidate.email.trim().toLowerCase() === email &&
-                    candidate.jelszo === password
-                );
-
-                if (!user) {
-                    message.textContent = "Hibás e-mail-cím vagy jelszó.";
-                    return;
-                }
-
-                this.currentUser = {
-                    nev: user.nev,
-                    email: user.email,
-                    telefon: typeof user.telefon === "string" ? user.telefon : "",
-                    cim: typeof user.cim === "string" ? user.cim : ""
-                };
-                window.location.hash = "order";
-            } catch (error) {
-                console.error("A bejelentkezés nem sikerült.", error);
-                message.textContent = "A bejelentkezési adatok betöltése nem sikerült. Próbáld újra később.";
-            } finally {
-                submitButton.disabled = false;
-            }
-        });
-    }
-
-    setupRegister() {
-        const form = this.main.querySelector("#register-form");
-        if (!form) {
-            throw new Error("A regisztrációs űrlap nem található.");
-        }
-
-        form.addEventListener("submit", event => {
-            event.preventDefault();
-            window.alert("Sikertelen regisztráció, A regisztrálás jelenleg nem elérhető");
-        });
-    }
 }
 
 /*
@@ -425,3 +268,4 @@ window.addEventListener("hashchange", () => {
     window.sites.load(window.location.hash.slice(1));
 });
 window.sites.load(window.location.hash.slice(1) || "home");
+
